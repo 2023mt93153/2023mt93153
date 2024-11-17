@@ -21,4 +21,10 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
+APIs :- 
+http://localhost:<port>/login
+http://localhost:<port>/register
+http://localhost:<port>/dashboard
+http://localhost:<port>/language-select
+http://localhost:<port>/materials
 
