@@ -1,0 +1,68 @@
+/* Container for the learning materials list */
+.materials-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  padding: 20px;
+}
+
+/* Individual learning material card */
+.material-card {
+  width: 100%;
+  max-width: 600px;
+  margin: 15px 0;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for the cards */
+.material-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Material title and description */
+.material-card h3 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.material-card p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Link style for materials */
+.material-card a {
+  color: #007bff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.material-card a:hover {
+  color: #0056b3;
+}
+
+/* "Add New Material" button */
+.add-material-btn {
+  padding: 12px 20px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+.add-material-btn:hover {
+  background-color: #218838;
+}
