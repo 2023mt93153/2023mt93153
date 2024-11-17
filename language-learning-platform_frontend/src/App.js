@@ -21,7 +21,7 @@ function App() {
       category: 'Grammar',
       language: 'Spanish',
       level: 'Beginner',
-      link: 'https://example.com/spanish-grammar',
+      link: 'https://tandem.net/blog/spanish-grammar-rules',
     },
     {
       id: 2,
@@ -30,7 +30,7 @@ function App() {
       category: 'Vocabulary',
       language: 'English',
       level: 'Advanced',
-      link: 'https://example.com/vocabulary',
+      link: 'https://learnlaughspeak.com/professional-vocabulary/',
     },
     {
       id: 3,
@@ -39,7 +39,7 @@ function App() {
       category: 'Audio Exercises',
       language: 'French',
       level: 'Intermediate',
-      link: 'https://example.com/pronunciation',
+      link: 'https://www.frenchtoday.com/blog/french-pronunciation/',
     },
   ];
 
