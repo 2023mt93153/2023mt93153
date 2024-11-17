@@ -5,10 +5,12 @@ import Register from './components/Auth/Register';
 import LanguageSelection from './components/LanguageSelection/LanguageSelection';
 import Materials from './components/LearningMaterials/Materials';
 import MaterialDetails from './components/LearningMaterials/MaterialDetails';
+import Dashboard from './components/Dashboard/Dashboard'; // Import Dashboard
 import './styles/App.css';
 
 function App() {
-  const [selectedLanguage, setSelectedLanguage] = useState('');
+  const [selectedLanguage, setSelectedLanguage] = useState(''); // Language state
+  const [user, setUser] = useState(null); // User data state
 
   // Sample materials data
   const sampleMaterials = [
@@ -48,8 +50,26 @@ function App() {
       </header>
       <Routes>
         {/* Login and Register Routes */}
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        <Route
+          path="/login"
+          element={<Login setUser={setUser} />}
+        />
+        <Route
+          path="/register"
+          element={<Register setUser={setUser} />}
+        />
+
+        {/* Dashboard Route */}
+        <Route
+          path="/dashboard"
+          element={
+            <Dashboard 
+              user={user} 
+              setSelectedLanguage={setSelectedLanguage} 
+              setUser={setUser} // Pass setUser here
+            />
+          }
+        />
 
         {/* Language Selection */}
         <Route
@@ -57,7 +77,7 @@ function App() {
           element={<LanguageSelection setSelectedLanguage={setSelectedLanguage} />}
         />
 
-        {/* Learning Materials: Pass filtered materials based on selected language */}
+        {/* Learning Materials */}
         <Route
           path="/materials"
           element={
