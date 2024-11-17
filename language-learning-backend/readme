@@ -1,1 +1,15 @@
+API Endpoints
 
+Authentication
+POST	/api/auth/register	Register a new user
+POST	/api/auth/login	Login and receive a token
+
+Language Selection
+GET	/api/languages	Fetch all supported languages
+
+Learning Materials
+GET	/api/materials	Fetch all learning materials
+GET	/api/materials/:id	Fetch material by ID
+
+npm run dev -> For Development Mode
+npm start -> For Production Mode
