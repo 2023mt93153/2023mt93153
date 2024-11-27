@@ -9,6 +9,40 @@ const Map<String, String> headers = {
 };
 
 class ApiService {
+  
+  // Sign Up a new user
+  static Future<void> signUp(String email, String password) async {
+    final response = await http.post(
+      Uri.parse('$baseUrl/users'),
+      headers: headers,
+      body: jsonEncode({
+        'username': email,  // Using email as username
+        'password': password,
+        'email': email,
+      }),
+    );
+
+    if (response.statusCode != 201) {
+      throw Exception('Failed to sign up user: ${response.body}');
+    }
+  }
+
+  // Log In an existing user
+  static Future<void> logIn(String email, String password) async {
+    final response = await http.post(
+      Uri.parse('$baseUrl/login'),
+      headers: headers,
+      body: jsonEncode({
+        'username': email,  // Using email as username
+        'password': password,
+      }),
+    );
+
+    if (response.statusCode != 200) {
+      throw Exception('Failed to log in user: ${response.body}');
+    }
+  }
+
   // Fetch tasks from Back4App
   static Future<List> getTasks() async {
     final response = await http.get(Uri.parse('$baseUrl/classes/Task'), headers: headers);
